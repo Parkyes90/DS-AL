@@ -30,3 +30,18 @@ peek/front : 큐 앞쪽 항목 조회
 is_empty : 큐가 비어있는지 확인
 size : 큐의 크기 확인
 ```
+
+### Deque
+
+양쪽 끝에서 항목의 조회, 삽입, 삭제 가능
+
+#### 기능
+``` 
+enqueue : 큐 뒤쪽에 항목 삽입
+dequeue : 큐 앞쪽의 항목 반환 & 제거
+peek/front : 큐 앞쪽 항목 조회
+is_empty : 큐가 비어있는지 확인
+size : 큐의 크기 확인
+enqueue_back : 큐 앞 쪽에서 항목 삽입
+dequeue_front : 큐 뒤쪽의 큐 반환 & 제거
+```
