@@ -27,9 +27,8 @@ class LinkedQueue(object):
             self.head = node
             self.tail = node
         else:
-            if self.tail:
-                self.tail.pointer = node
-
+            # head 주소의 pointer 에 node 가 할당된 후 tail 은 node 로 덮어씀
+            self.tail.pointer = node
             self.tail = node
 
         self.count += 1
@@ -55,7 +54,8 @@ if __name__ == "__main__":
     for i in range(10):
         queue.enqueue(i)
     print(f"Queue size {queue.size()}")
-
+    for i in range(5):
+        print(queue.dequeue())
     print(f"Queue dequeue {queue.dequeue()}")
     print(f"Queue peek {queue.peek()}")
     print(f"is Queue Empty? : {queue.is_empty()}")
